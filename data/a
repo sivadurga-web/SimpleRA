@@ -1,0 +1,37 @@
+INSERT 1
+INSERT 10
+INSERT 20
+INSERT 30
+INSERT 40
+INSERT 50
+INSERT 60
+INSERT 70
+INSERT 80
+INSERT 90
+INSERT 100
+INSERT 110
+
+
+
+INSERT 9 
+// left leaf redistribute
+DELETE 20
+INSERT 20
+// right leaf redistribute
+DELETE 9
+INSERT 21
+INSERT 22
+// right merge and left internal redistribute
+DELETE 40
+
+INSERT 41
+// left merge and right internal redistribute
+DELETE 21
+
+// left merge and left internal merge
+DELETE 70
+
+INSERT 70
+// left merge and right internal merge
+DELETE 20
+DELETE 30
